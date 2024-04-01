@@ -11,14 +11,22 @@ body {
   margin: 0;
   box-sizing: border-box;
   min-height: 100vh;
+  display: grid;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 300px 900px;
+  margin: 20px;
 }
 
 .header {
   background-color: var(--primary);
   color: var(--white);
-  display: grid;
   align-items: center;
   justify-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header__title {
@@ -42,6 +50,7 @@ body {
   color: var(--primary);
   position: relative;
 }
+
 .nav__link::after, .nav__link--active::after {
   position: absolute;
   content: "";
@@ -72,12 +81,18 @@ body {
   padding: 0 12px;
 }
 
-.footer {
+.img_card__container {
   display: grid;
+  grid-template-columns: repeat(4, 0.3fr);
+  grid-template-rows: repeat (3, 0.3fr);
+}
+
+.footer {
   align-items: center;
   justify-items: center;
 }
 
+/*
 @media screen and (max-width: 1100px) {
   .header__title {
     font-size: 2rem;
